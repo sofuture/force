@@ -34,26 +34,26 @@ serve-docs:
 .PHONY: 2-watch
 2-watch:
 	$(MAKE) all
-	force -d examples/demo/2-watch/G
+	force -d examples/demo/2-watch/g.force
 
 .PHONY: 3-github
 3-github:
 	$(MAKE) all
-	force examples/demo/3-github/G --setup=./examples/github/setup.force
+	force examples/demo/3-github/g.force --setup=./examples/github/setup.force
 
 .PHONY: 4-docker
 4-docker:
 	$(MAKE) all
-	force examples/demo/4-docker/G --setup=./examples/github/setup.force
+	force examples/demo/4-docker/g.force --setup=./examples/github/setup.force
 ##
 
 .PHONY: ssh
-ssh: 
+ssh:
 	$(MAKE) all
 	cd examples/ssh && force -d ssh.force
 
 .PHONY: aws
-aws: 
+aws:
 	$(MAKE) all
 	cd examples/aws && force -d aws.force
 
